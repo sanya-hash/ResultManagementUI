@@ -1,0 +1,25 @@
+<div class="back"><button type="button" class="btn btn-success" routerLink="/student/dashboard">Back</button>
+
+<div class="container">
+    <h3>Result</h3>
+    <table class="table table-bordered">
+        <tbody>
+            <tr class="table-primary">
+                <th>Roll No.:</th>
+                <td>{{ students.rollno }}</td>
+            </tr>
+            <tr class="table-success">
+                <th>Name:</th>
+                <td>{{ students.name }}</td>
+            </tr>
+            <tr class="table-info">
+                <th>Date of Birth:</th>
+                <td>{{ students.dob }}</td>
+            </tr>
+            <tr class="table-warning">
+                <th>Score:</th>
+                <td>{{ students.score }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

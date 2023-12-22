@@ -1,0 +1,45 @@
+<div class="back"><button type="button" class="btn btn-success" routerLink="/teacher/dashboard">Back</button>
+
+<div class="main">
+<div class="heading"><h4>Add New Result</h4></div>
+
+<form (ngSubmit)="submit()">
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Roll No.</label>
+        <div class="col-sm-10">
+            <input type="text" [(ngModel)]="students.rollno" name="rollno" class="form-control" id="colFormLabel"  required placeholder="">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" [(ngModel)]="students.name" name="name" class="form-control" id="colFormLabel" placeholder="" required>
+        </div>
+    </div>
+<div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Dob</label>
+    <div class="col-sm-10">
+        <input type="Date" [(ngModel)]="students.dob" name="dob" class="form-control" id="colFormLabel" placeholder="" required>
+    </div>
+</div>
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Score</label>
+        <div class="col-sm-10">
+            <input type="text" [(ngModel)]="students.score"name="score" class="form-control" id="colFormLabel" placeholder="" required="">
+        </div>
+    </div>
+    <div class="button-container">
+        <div class="submit">
+    
+    
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+        <div class="clear">
+            <button type="reset" class="btn btn-outline-secondary">Clear</button>
+        </div>
+    </div>
+
+</form>
+
+</div>
+

@@ -1,0 +1,28 @@
+<div class="add"><button type="button" class="btn btn-success" routerLink="/teacher/add">Add Record</button>
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Roll No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Dob</th>
+            <th scope="col">Score</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let student of students">
+
+            <!-- <th scope="row">1</th> -->
+                    <td>{{ student.rollno }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.dob | date: 'yyyy-MM-dd' }}</td>
+                    <td>{{ student.score }}</td>
+                    <td (click)="update(student.rollno)"><i class="fas fa-edit"></i></td>
+                    <td (click)="delete(student.rollno)"><i class="fas fa-trash-alt"></i></td>
+        </tr>
+      
+    </tbody>
+</table>

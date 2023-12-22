@@ -1,0 +1,33 @@
+.main {
+    /* margin-left: 80px;
+    margin-top: 20px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.back {
+    margin: 20px;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+
+}
+
+/* Add this CSS to your stylesheet */
+.button-container {
+    margin-left: 235px;
+    margin-top: 40px;
+    display: flex;
+    /* justify-content: space-between; */
+    /* Adjust as needed */
+}
