@@ -16,6 +16,7 @@ export class AddResultComponent {
     score: null,
   };
   submit(){
+    
     this.service.addResult(this.students).subscribe((result)=>{
       window.alert("New result added!")
       console.log("uploaded Successfully");
