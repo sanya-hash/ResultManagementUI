@@ -1,22 +1,22 @@
 <div class="container">
     <h3>Login here</h3>
-    <form>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="exampleInputEmail1">Username:</label>
-            <input type="username" class="form-control" id="exampleInputUserName" placeholder="Enter Username">
+            <input type="username" class="form-control" formControlName="email" formControlName="email" id="exampleInputUserName" placeholder="Enter Username">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group form-radio">
             <label class="form-check-label d-block">Select Role:</label>
             <div class="form-check form-check-inline">
-                <input type="radio" class="form-check-input" id="teacherRole" name="role" value="teacher">
+                <input type="radio" class="form-check-input" id="teacherRole" name="role" formControlName="role" value="teacher">
                 <label class="form-check-label" for="teacherRole">Teacher</label>
             </div>
             <div class="form-check form-check-inline">
-                <input type="radio" class="form-check-input" id="studentRole" name="role" value="student">
+                <input type="radio" class="form-check-input" id="studentRole" name="role" formControlName="role" value="student">
                 <label class="form-check-label" for="studentRole">Student</label>
             </div>
         </div>

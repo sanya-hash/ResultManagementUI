@@ -1,34 +1,38 @@
 <div class="container">
     <h3>Register here</h3>
-    <form>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="exampleInputEmail1">Username:</label>
-            <input type="username" class="form-control" id="exampleInputUserName" placeholder="Enter Username">
+            <input type="username" formControlName="username" class="form-control" id="exampleInputUserName" placeholder="Enter Username">
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Email:</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                formControlName="email" placeholder="Enter email">
+            <small id="emailHelp"  class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
 
         <div class="form-group">
             <label for="exampleInputPassword1">Password:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password:</label>
+            <input type="password" formControlName="conPassword" class="form-control" id="confirmpassword" placeholder="Confirm Password">
         </div>
         <div class="form-group form-radio">
             <label class="form-check-label d-block">Select Role:</label>
             <div class="form-check form-check-inline">
-                <input type="radio" class="form-check-input" id="teacherRole" name="role" value="teacher">
+                <input type="radio" class="form-check-input" id="teacherRole" name="role"  formControlName ="role" value="teacher">
                 <label class="form-check-label" for="teacherRole">Teacher</label>
             </div>
             <div class="form-check form-check-inline">
-                <input type="radio" class="form-check-input" id="studentRole" name="role" value="student">
+                <input type="radio" class="form-check-input" id="studentRole" name="role"formControlName="role" value="student">
                 <label class="form-check-label" for="studentRole">Student</label>
             </div>
         </div>
 
-        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        <button id="submit" type="submit" class="btn btn-primary">Register</button>
 
     </form>
     <small id="login" class="form-text text-muted">Already registered? <a href="../login">Login here</a></small>
