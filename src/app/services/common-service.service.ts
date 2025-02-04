@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CommonServiceService {
 
-  private apiUrl="http://localhost:8084/result"
+  private apiUrl="http://localhost:8088/result"
   constructor(private http: HttpClient) { }
   getResults(): Observable<Student[]>{
     return this.http.get<Student[]>(`${this.apiUrl}`);

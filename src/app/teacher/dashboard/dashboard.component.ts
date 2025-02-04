@@ -38,7 +38,7 @@ export class DashboardComponent implements OnInit{
   delete(rollno:any){
     this.c.deleteResult(rollno).subscribe((result:any)=>{
       //console.log("Deleted");
-      //this.location.reload();
+      // this.location.reload();
       this.students = this.students.filter(student => student.rollno !== rollno)
     },
     (error)=>{

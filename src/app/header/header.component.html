@@ -1,4 +1,11 @@
 <nav class="navbar navbar-dark bg-dark">
-    <!-- Navbar content -->
     <a class="navbar-brand">Result Management System</a>
-</nav>
+        <div class="example-spacer"></div>
+        
+        <a *ngIf="!loggedIn" routerLink="login">Login</a>
+        <a *ngIf="!loggedIn" routerLink="register">Register</a>
+        <a *ngIf="loggedIn" >{{user}}</a>
+        <a *ngIf="loggedIn" (click)="logoutUser()" button >Logout</a>
+
+</nav> 
+
